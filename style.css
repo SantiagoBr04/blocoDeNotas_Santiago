@@ -51,4 +51,10 @@ p {
 
 #LimparNotas {
     border-radius: 15px;
+    color: red;
+}
+
+#SalvarNotas {
+    border-radius: 15px;
+    color: green;
 }
