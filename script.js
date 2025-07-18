@@ -60,4 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Nota salva no localStorage!"); // Uma mensagem no console para fins de depuração.
     });
 
+    const BtnTrocarCores = document.getElementById('TrocarTema');
+    const TemaAtual = localStorage.getItem('Tema');
+
+    if(TemaAtual == 'claro') {
+        document.body.classList.add('modo-claro');
+    }
+
+    BtnTrocarCores.addEventListener('click', () => {
+        document.body.classList.toggle('modo-claro');
+        const Tema = document.body.classList.contains('modo-claro') ? 'claro' : 'escuro';
+        localStorage.setItem('Tema', Tema);
+        console.log("Trocou de cor");
+    });
+
+
 });
